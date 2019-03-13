@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
+import userData from '../../../sample_data/sampleUsers'
 
 const Users = () => {
-  const [firstName, setFirstName] = useState("");
-  const [location, setLocation] = useState("");
+  console.log(userData[0].userIcon);
+  const [userIcon, setUserIcon] = useState(userData[0].userIcon);
+  const [firstName, setFirstName] = useState(userData[0].firstName);
+  const [location, setLocation] = useState(userData[0].location);
+
 
   return (
     <div>
-      <div className="User">{firstName}</div>
-      <div className="Location">{location}</div>
+      <img className="user-icon" src={`${userIcon}`} />
+      <div className="username">{firstName}</div>
+      <div className="user-location">{location}</div>
     </div>
   );
 }
