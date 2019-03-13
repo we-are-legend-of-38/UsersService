@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import userData from '../../../sample_data/sampleUsers'
+import userData from '../../../public/sample_data/sampleUsers';
 
 const Users = () => {
-  console.log(userData[0].userIcon);
   const [userIcon, setUserIcon] = useState(userData[0].userIcon);
   const [firstName, setFirstName] = useState(userData[0].firstName);
   const [location, setLocation] = useState(userData[0].location);
@@ -10,7 +9,7 @@ const Users = () => {
 
   return (
     <div>
-      <img className="user-icon" src={`${userIcon}`} />
+      <img className="user-icon" src={require('../../../public/sample_data/user_icons/' + userIcon)} />
       <div className="username">{firstName}</div>
       <div className="user-location">{location}</div>
     </div>
