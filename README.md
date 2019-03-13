@@ -8,4 +8,4 @@
 ## Tech Stack ## 
   - Frontend: React 
   - Server: Node/Express
-  - Database: MySQL, PostgreSQL, and MongoDB
+  - Database: MongoDB
