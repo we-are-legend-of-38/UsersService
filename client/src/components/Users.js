@@ -6,10 +6,9 @@ const Users = () => {
   const [firstName, setFirstName] = useState(userData[0].firstName);
   const [location, setLocation] = useState(userData[0].location);
 
-
   return (
     <div>
-      <img className="user-icon" src={require('../../../public/sample_data/user_icons/' + userIcon)} />
+      <img className="user-icon" src={require(`../../../public/sample_data/user_icons/${userIcon}`)} />
       <div className="username">{firstName}</div>
       <div className="user-location">{location}</div>
     </div>
